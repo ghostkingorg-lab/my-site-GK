@@ -18,99 +18,128 @@ body {
         background-image: url('tel.jpg'); /* Имя вертикальной картинки */
     }
 }
+
+/* ===== АНИМАЦИЯ ПРИЗРАЧНОГО ПЕРЕЛИВА И СВЕЧЕНИЯ ===== */
+@keyframes ghostGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(80, 200, 255, 0.3), inset 0 0 10px rgba(80, 200, 255, 0.2);
+        border-color: rgba(120, 220, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 22px rgba(120, 230, 255, 0.7), inset 0 0 15px rgba(120, 230, 255, 0.4);
+        border-color: rgba(180, 245, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(80, 200, 255, 0.3), inset 0 0 10px rgba(80, 200, 255, 0.2);
+        border-color: rgba(120, 220, 255, 0.4);
+    }
+}
+
+/* ===== ОБЩИЕ ЭФФЕКТЫ ДЛЯ КНОПОК ПОД ЦВЕТ ФОНА ===== */
+.btn, .btn1, .btn2, .btn3, .btn4 {
+    background: rgba(10, 18, 32, 0.65) !important; /* Тёмно-синий полупрозрачный фон под цвет замка */
+    backdrop-filter: blur(8px);                    /* Эффект матового стекла */
+    -webkit-backdrop-filter: blur(8px);
+    color: #e0f7fc !important;                     /* Призрачно-белый текст */
+    border: 2px solid rgba(120, 220, 255, 0.4);
+    border-radius: 12px;
+    cursor: pointer;
+    text-shadow: 0 0 8px rgba(120, 220, 255, 0.8);
+    animation: ghostGlow 3s infinite ease-in-out;  /* Плавный перелив */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
 .btn {
-    color: dimgray;
     font-size: 49px;
     position: absolute;
     left: 12vw;
     top: 280px;
+    padding: 5px 20px;
 }
 
-    .btn:hover {
-        color: red;
-        opacity: 0.5;
-        background-color: black;
-        transform: scale(1.1);
-        transition: all 0.4s;
-    }   
-    .btn1 {
+.btn:hover {
+    color: #ffffff !important;
+    background: rgba(15, 35, 60, 0.85) !important;
+    box-shadow: 0 0 30px rgba(0, 230, 255, 0.9), inset 0 0 20px rgba(0, 230, 255, 0.5);
+    transform: translateY(-4px) scale(1.05);
+    text-shadow: 0 0 12px #00ffff;
+}   
+
+.btn1 {
     border-radius: 20px;
-    color: dimgray;
-    background-color: black;
-    transform: scale(1.5);
-    background-color: buttonshadow;
     font-size: 24px;
     position: absolute;
     left: 17vw;
     top: 375px;
-    }
+    padding: 8px 22px;
+}
 
-    .btn1:hover {
-    color: red;
-    opacity: 0.5;
-    background-color: black;
-    transform: scale(1.7);
-    transition: all 0.4s;
-    }
-    .btn2 {
-    color: dimgray;
+.btn1:hover {
+    color: #ffffff !important;
+    background: rgba(15, 35, 60, 0.85) !important;
+    box-shadow: 0 0 30px rgba(0, 230, 255, 0.9), inset 0 0 20px rgba(0, 230, 255, 0.5);
+    transform: translateY(-4px) scale(1.08);
+    text-shadow: 0 0 12px #00ffff;
+}
+
+.btn2 {
     font-size: 49px;
     position: absolute;
     left: 33vw;
     top: 280px;
-    }
+    padding: 5px 20px;
+}
 
-    .btn2:hover {
-    color: red;
-    opacity: 0.5;
-    background-color: black;
-    transform: scale(1.1);
-    transition: all 0.4s;
-    }
-    .btn3 {
-    color: dimgray;
+.btn2:hover {
+    color: #ffffff !important;
+    background: rgba(15, 35, 60, 0.85) !important;
+    box-shadow: 0 0 30px rgba(0, 230, 255, 0.9), inset 0 0 20px rgba(0, 230, 255, 0.5);
+    transform: translateY(-4px) scale(1.05);
+    text-shadow: 0 0 12px #00ffff;
+}
+
+.btn3 {
     font-size: 49px;
     position: absolute;
     left: 79vw;
     top: 280px;
-    }
+    padding: 5px 20px;
+}
 
-    .btn3:hover {
-    color: red;
-    opacity: 0.5;
-    background-color: black;
-    transform: scale(1.1);
-    transition: all 0.4s;
-    }
+.btn3:hover {
+    color: #ffffff !important;
+    background: rgba(15, 35, 60, 0.85) !important;
+    box-shadow: 0 0 30px rgba(0, 230, 255, 0.9), inset 0 0 20px rgba(0, 230, 255, 0.5);
+    transform: translateY(-4px) scale(1.05);
+    text-shadow: 0 0 12px #00ffff;
+}
 
-    .btn4 {
+.btn4 {
     border-radius: 20px;
-    color: dimgray;
-    background-color: black;
-    transform: scale(1.5);
-    background-color: buttonshadow;
     font-size: 21px;
     position: absolute;
     left: 70vw;
     top: 375px;
-    }
+    padding: 8px 22px;
+}
 
-    .btn4:hover {
-    color: red;
-    opacity: 0.5;
-    background-color: black;
-    transform: scale(1.7);
-    transition: all 0.4s;
-    }
-    /* ===== ТЕЛЕФОН ===== */
+.btn4:hover {
+    color: #ffffff !important;
+    background: rgba(15, 35, 60, 0.85) !important;
+    box-shadow: 0 0 30px rgba(0, 230, 255, 0.9), inset 0 0 20px rgba(0, 230, 255, 0.5);
+    transform: translateY(-4px) scale(1.08);
+    text-shadow: 0 0 12px #00ffff;
+}
 
-    @media (max-width: 600px) {
+/* ===== ТЕЛЕФОН ===== */
+
+@media (max-width: 600px) {
 
     body {
-    background-attachment: scroll;
-    background-size: cover;
-    background-position: center;
-    overflow-x: hidden;
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+        overflow-x: hidden;
     }
 
     /* Все кнопки */
@@ -119,52 +148,52 @@ body {
     .btn2,
     .btn3,
     .btn4 {
-    position: relative;
-    left: auto;
-    top: auto;
-    transform: none;
-    display: block;
-    width: 90%;
-    max-width: 400px;
-    margin: 20px auto;
-    box-sizing: border-box;
-    font-size: 20px;
-    padding: 15px;
-    z-index: 10;
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        display: block;
+        width: 90%;
+        max-width: 400px;
+        margin: 20px auto;
+        box-sizing: border-box;
+        font-size: 20px;
+        padding: 15px;
+        z-index: 10;
     }
 
     /* Привет */
     .btn {
-    font-size: 32px;
-    margin-top: 40px;
+        font-size: 32px;
+        margin-top: 40px;
     }
 
     /* Кнопка Telegram */
     .btn1 {
-    font-size: 17px;
+        font-size: 17px;
     }
 
     /* Связь с автором */
     .btn2 {
-    font-size: 25px;
+        font-size: 25px;
     }
 
     /* Автор */
     .btn3 {
-    font-size: 28px;
+        font-size: 28px;
     }
 
     /* Подарок */
     .btn4 {
-    font-size: 18px;
+        font-size: 18px;
     }
 
-    /* Убираем увеличение кнопок при наведении на телефоне */
+    /* Убираем изменение масштаба при наведении на телефоне */
     .btn:hover,
     .btn1:hover,
     .btn2:hover,
     .btn3:hover,
     .btn4:hover {
-    transform: none;
+        transform: none;
     }
-    }
+}
