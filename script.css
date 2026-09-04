@@ -1,0 +1,170 @@
+/* ОБЩИЕ СТИЛИ (для всех устройств) */
+body {
+    background-size: cover; /* Растягивает картинку, сохраняя пропорции */
+    background-position: center center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Запрещает повторение */
+    background-attachment: scroll; /* ВАЖНО для мобильных: фон скроллится вместе с контентом */
+    margin: 0;
+    min-height: 100vh;
+}
+@media (min-width: 769px) { 
+    body {
+        background-image: url('fon.jpg'); 
+        background-attachment: fixed;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        background-image: url('tel.jpg'); /* Имя вертикальной картинки */
+    }
+}
+.btn {
+    color: dimgray;
+    font-size: 49px;
+    position: absolute;
+    left: 12vw;
+    top: 280px;
+}
+
+    .btn:hover {
+        color: red;
+        opacity: 0.5;
+        background-color: black;
+        transform: scale(1.1);
+        transition: all 0.4s;
+    }   
+    .btn1 {
+    border-radius: 20px;
+    color: dimgray;
+    background-color: black;
+    transform: scale(1.5);
+    background-color: buttonshadow;
+    font-size: 24px;
+    position: absolute;
+    left: 17vw;
+    top: 375px;
+    }
+
+    .btn1:hover {
+    color: red;
+    opacity: 0.5;
+    background-color: black;
+    transform: scale(1.7);
+    transition: all 0.4s;
+    }
+    .btn2 {
+    color: dimgray;
+    font-size: 49px;
+    position: absolute;
+    left: 33vw;
+    top: 280px;
+    }
+
+    .btn2:hover {
+    color: red;
+    opacity: 0.5;
+    background-color: black;
+    transform: scale(1.1);
+    transition: all 0.4s;
+    }
+    .btn3 {
+    color: dimgray;
+    font-size: 49px;
+    position: absolute;
+    left: 79vw;
+    top: 280px;
+    }
+
+    .btn3:hover {
+    color: red;
+    opacity: 0.5;
+    background-color: black;
+    transform: scale(1.1);
+    transition: all 0.4s;
+    }
+
+    .btn4 {
+    border-radius: 20px;
+    color: dimgray;
+    background-color: black;
+    transform: scale(1.5);
+    background-color: buttonshadow;
+    font-size: 21px;
+    position: absolute;
+    left: 70vw;
+    top: 375px;
+    }
+
+    .btn4:hover {
+    color: red;
+    opacity: 0.5;
+    background-color: black;
+    transform: scale(1.7);
+    transition: all 0.4s;
+    }
+    /* ===== ТЕЛЕФОН ===== */
+
+    @media (max-width: 600px) {
+
+    body {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    }
+
+    /* Все кнопки */
+    .btn,
+    .btn1,
+    .btn2,
+    .btn3,
+    .btn4 {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    font-size: 20px;
+    padding: 15px;
+    z-index: 10;
+    }
+
+    /* Привет */
+    .btn {
+    font-size: 32px;
+    margin-top: 40px;
+    }
+
+    /* Кнопка Telegram */
+    .btn1 {
+    font-size: 17px;
+    }
+
+    /* Связь с автором */
+    .btn2 {
+    font-size: 25px;
+    }
+
+    /* Автор */
+    .btn3 {
+    font-size: 28px;
+    }
+
+    /* Подарок */
+    .btn4 {
+    font-size: 18px;
+    }
+
+    /* Убираем увеличение кнопок при наведении на телефоне */
+    .btn:hover,
+    .btn1:hover,
+    .btn2:hover,
+    .btn3:hover,
+    .btn4:hover {
+    transform: none;
+    }
+    }
