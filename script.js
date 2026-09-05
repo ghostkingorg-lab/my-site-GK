@@ -1,6 +1,6 @@
 };
 document.getElementById("btn2").onclick = function() {
-    alert("Истории в разработке!");
+    alert("Если кто-то сможет поддержать автора в телеграмм, любым подарком, знайте, что благодаря вам улучшается качество любого проэкта!");
 };
 function toggleMusicMenu() {
     var modal = document.getElementById("musicModal");
