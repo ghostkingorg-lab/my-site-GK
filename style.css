@@ -6,14 +6,13 @@ body {
     background-size: cover; /* Растягивает картинку, сохраняя пропорции */
     background-position: center center; /* Центрирует изображение */
     background-repeat: no-repeat; /* Запрещает повторение */
-    background-att
-
-@media (min-width: 769px) {
+    background-att @media (min-width: 769px)
+} 
     body {
         background-image: url('fon.jpg');
         background-attachment: fixed;
     }
-}
+
 
 @media (max-width: 768px) {
     body {
