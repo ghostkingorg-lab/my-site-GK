@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -10,13 +9,70 @@
 
 </head>
 <body>
-    <button id="btn" class="btn"> Привет!!!</button>
+    <button id="btn" class="btn" onclick="toggleMusicMenu()">🎵Звуки🎵</button>
+    <!-- Всплывающее музыкальное меню -->
+
+    <div id="musicModal" class="music-modal">
+        <div class="music-modal-content">
+            <span class="close-btn" onclick="toggleMusicMenu()">&times;</span>
+            <h2 class="music-title">Звуки для атмосферы🌑</h2>
+            <audio id="mainAudio" controls style="width: 100%; margin-bottom: 15px;"></audio>
+
+            <!-- Список треков -->
+            <ul class="playlist">
+                <li onclick="playTrack('the-storm-is-picking-up.mp3', this)">1. Ночная гроза№1</li>
+                <li onclick="playTrack('thunderstorm-with-light-rain.mp3', this)">2. Ночная гроза№2</li>
+                <li onclick="playTrack('огонь1.mp3', this)">3. Горение пламени</li>
+                <li onclick="playTrack('огонь2.mp3', this)">4. Трещание огня</li>
+                <li onclick="playTrack('nocturnal-forest.mp3', this)">5. Звуки живой природы</li>
+                <li onclick="playTrack('bfc9122ee077846.mp3', this)">6. Звуки водопада</li>
+                <li onclick="playTrack('clouds.mp3', this)">7. Гул ветра</li>
+                <li onclick="playTrack('f922f3d825fc842.mp3', this)">8. Нагнитающие звуки</li>
+            </ul>
+        </div>
+    </div>
+
     <button id="btn4" class="btn4" onclick="window.location.href='https://t.me/Gk_Prime_org?text=Хочу%20отправить%20подарок%20🎁'">
         🎁Отправить подарок🎁
     </button>
-    <button id="btn2" class="btn2">Связь с автором!====></button>
-    <button id="btn3" class="btn3" onclick="window.location.href='https://t.me/Gk_Prime_org'">Автор</button>
+    <button id="btn2" class="btn2">Сборник историй📜👻</button>
+    <button id="btn3" class="btn3" onclick="window.location.href='https://t.me/Gk_Prime_org'">Автор💬</button>
     <button id="btn1" class="btn1" onclick="window.location.href='https://t.me/ghostKing_h_story'">[Нажми, чтобы перейти в наш телеграмм]</button>
     <script src="script.js"></script>
+    };
+    <!-- Весь код ваших кнопок и модального окна находится выше -->
+
+    <script>
+        // Функция открытия и закрытия музыкального окна
+        function toggleMusicMenu() {
+        var modal = document.getElementById("musicModal");
+        if (modal.style.display === "none" || modal.style.display === "") {
+        modal.style.display = "block";
+        } else {
+        modal.style.display = "none";
+        }
+        }
+        function playTrack(trackUrl, element) {
+        var audio = document.getElementById("mainAudio");
+
+        // Подсветка активной песни
+        var items = document.querySelectorAll(".playlist li");
+        items.forEach(function(item) {
+        item.classList.remove("active");
+        });
+        element.classList.add("active");
+
+        audio.src = trackUrl;
+        audio.play();
+        }
+
+        // Закрытие окна при клике в пустую область
+        window.onclick = function(event) {
+        var modal = document.getElementById("musicModal");
+        if (event.target === modal) {
+        modal.style.display = "none";
+        }
+        };
+    </script>
 </body>
 </html>
