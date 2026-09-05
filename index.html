@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="icon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <button id="btn" class="btn" onclick="toggleMusicMenu()">🎵Звуки🎵</button>
-    <!-- Всплывающее музыкальное меню -->
 
-    <div id="musicModal" class="music-modal">
+    <!-- Всплывающее музыкальное меню -->
+    <div id="musicModal" class="music-modal" style="display: none;">
         <div class="music-modal-content">
             <span class="close-btn" onclick="toggleMusicMenu()">&times;</span>
             <h2 class="music-title">Звуки для атмосферы🌑</h2>
@@ -35,15 +34,84 @@
     <button id="btn4" class="btn4" onclick="window.location.href='https://t.me/Gk_Prime_org?text=Хочу%20отправить%20подарок%20🎁'">
         🎁Отправить подарок🎁
     </button>
-    <button id="btn2" class="btn2">Сборник историй📜👻</button>
+
+    <!-- Кнопка вызова историй -->
+    <button id="btn2" class="btn2" onclick="toggleStoriesMenu()">Сборник историй📜👻</button>
+
+    <!-- Всплывающее окно историй -->
+    <div id="storiesModal" class="stories-modal" style="display: none;">
+        <div class="stories-modal-content">
+            <span class="close-btn" onclick="toggleStoriesMenu()">&times;</span>
+            <h2 class="stories-title">📖 Мрачные Хроники</h2>
+
+            <!-- ЭКРАН 1: ВЫБОР КАТЕГОРИИ -->
+            <div id="categorySelect">
+                <button class="story-header" onclick="showCategory('authorStories')">
+                    👑 Обитель GhostKing & Древние Легенды <span class="arrow">▶</span>
+                </button>
+                <button class="story-header" onclick="showCategory('realStories')" style="margin-top: 15px;">
+                    👁 Реальные аномалии и невыдуманные истории <span class="arrow">▶</span>
+                </button>
+            </div>
+
+            <!-- ЭКРАН 2: АВТОРСКИЕ ИСТОРИИ И ЛЕГЕНДЫ -->
+            <div id="authorStories" style="display: none;">
+                <button class="back-btn" onclick="showCategory('categorySelect')">⬅ Назад к категориям</button>
+
+                <!-- ИСТОРИЯ 1: ДЕРЕВНЯ ВОСПОМИНАНИЙ -->
+                <div class="story-item">
+                    <button class="story-header" onclick="toggleAccordion(this)">
+                        1. Деревня воспоминаний <span class="arrow">▼</span>
+                    </button>
+                    <div class="story-body">
+                        <div class="chapter">
+                            <h4>Часть №1</h4>
+                            <p>Густой осенний туман плотным саваном опустился на деревню Заболотье. Прогнившие крыши покосившихся изб провалились внутрь, словно черные провалы глазниц, а сухой бурьян у входов шуршал под порывами сырого, ледяного ветра. Виктор поправил ремень тяжелого фотоаппарата на плече. Парень с трудом сделал шаг через порог полуразрушенной избы, проваливаясь ногами в труху из истлевших досок и палой листвы. В воздухе стоял стойкий, тяжелый запах плесени, старой пыли и сырой земли.</p>
+                            <p>В углу комнаты, на покосившемся комоде, среди кучи мусора лежал массивный советский радиоприемник в радиоле. Его динамик был затянут серым, выцветшим сукном, а круглые регуляторы покрывал толстый слой грязи. Виктор поднес камеру к лицу, наводя фокус, как вдруг корпус радиоприемника громко треснул. Сквозь затянутые паутиной щели пробился зеленый огонек индикатора, и из глубины динамика раздалось громкое, шипящее шипение статики.</p>
+                            <p>Виктор отпрянул, наступив на хрустнувшую ветку.</p>
+                            <p>«Откуда здесь электричество?» – прошептал он про себя, чувствуя, как липкий холод медленно ползет по спине.</p>
+                            <p>Шум радиоволн резко сменился тихим, чистым звуком. Это был не треск передатчика и не чужая трансляция. Из динамика отчетливо доносился глубокий, ровный гул человеческого дыхания. Кто-то на том конце провода дышал прямо в микрофон – тяжело, с легким хрипом, словно после долгой ходьбы.</p>
+                            <p>«Эй, есть кто живой?» – громко спросил Виктор, пытаясь перебить нарастающий страх.</p>
+                            <p>Радио замолкло на секунду, а затем из динамика раздался тихий, шелестящий голос. Он звучит не из колонки, а будто прямо у Виктора в голове. Голос до мельчайших деталей воспроизводил его собственные самые сокровенные, постыдные мысли – те самые слова, которые парень никому и никогда не произносил вслух, даже самому себе в полной темноте.</p>
+                            <p>«Ты думал, что сможешь просто уйти и забыть все?» – прошелестело из динамика с сухой, издевательской интонацией.</p>
+                            <p>Виктор замер, потеряв способность дышать. Каждое слово радиоприемника попадало точно в цель, вскрывая старые страхи, вину за прошлые ошибки и темные желания, о которых не знал ни один живой человек. Это был поток его собственного внутреннего монолога, но озвученный чужим, мертвенным голосом.</p>
+                            <p>«Замолчи!» – крикнул Виктор и сделал шаг назад к выходу.</p>
+                            <p>Но радио не останавливалось. Голос начал говорить быстрее, накладываясь сам на себя в несколько тонов. Вслед за его мыслями из динамика донесся звук, от которого кровь стынет в жилах: отчетливый, громкий скрип половиц прямо за спиной Виктора.</p>
+                            <p>«Повернись, Виктор», – произнес радиоприемник голосом, в котором больше не осталось человеческих интонаций.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Место для следующих авторских историй -->
+            </div>
+
+            <!-- ЭКРАН 3: НЕВЫДУМАННЫЕ ИСТОРИИ -->
+            <div id="realStories" style="display: none;">
+                <button class="back-btn" onclick="showCategory('categorySelect')">⬅ Назад к категориям</button>
+
+                <!-- Заглушка для первой невыдуманной истории -->
+                <div class="story-item">
+                    <button class="story-header" onclick="toggleAccordion(this)">
+                        1. Тайна перевала (Реальный случай) <span class="arrow">▼</span>
+                    </button>
+                    <div class="story-body">
+                        <div class="chapter">
+                            <h4>Часть 1: Архивные данные</h4>
+                            <p>Раздел находится в разработке. Скоро здесь появятся невыдуманные мистические события...</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
     <button id="btn3" class="btn3" onclick="window.location.href='https://t.me/Gk_Prime_org'">Автор💬</button>
     <button id="btn1" class="btn1" onclick="window.location.href='https://t.me/ghostKing_h_story'">[Нажми, чтобы перейти в наш телеграмм]</button>
-    <script src="script.js"></script>
-    };
-    <!-- Весь код ваших кнопок и модального окна находится выше -->
 
     <script>
-        // Функция открытия и закрытия музыкального окна
+        // --- РАБОТА С МУЗЫКОЙ ---
         function toggleMusicMenu() {
         var modal = document.getElementById("musicModal");
         if (modal.style.display === "none" || modal.style.display === "") {
@@ -54,8 +122,6 @@
         }
         function playTrack(trackUrl, element) {
         var audio = document.getElementById("mainAudio");
-
-        // Подсветка активной песни
         var items = document.querySelectorAll(".playlist li");
         items.forEach(function(item) {
         item.classList.remove("active");
@@ -66,11 +132,51 @@
         audio.play();
         }
 
-        // Закрытие окна при клике в пустую область
-        window.onclick = function(event) {
-        var modal = document.getElementById("musicModal");
-        if (event.target === modal) {
+        // --- РАБОТА С ИСТОРИЯМИ ---
+        function toggleStoriesMenu() {
+        var modal = document.getElementById("storiesModal");
+        if (modal.style.display === "none" || modal.style.display === "") {
+        modal.style.display = "block";
+        } else {
         modal.style.display = "none";
+        }
+        }
+
+        // Переключение между категориями историй
+        function showCategory(categoryId) {
+        document.getElementById("categorySelect").style.display = "none";
+        document.getElementById("authorStories").style.display = "none";
+        document.getElementById("realStories").style.display = "none";
+
+        document.getElementById(categoryId).style.display = "block";
+        }
+
+        // Раскрытие текста истории
+        function toggleAccordion(element) {
+        element.classList.toggle("active");
+        var body = element.nextElementSibling;
+
+        if (body.style.maxHeight) {
+        body.style.maxHeight = null;
+        body.style.paddingTop = "0px";
+        body.style.paddingBottom = "0px";
+        } else {
+        body.style.maxHeight = body.scrollHeight + 30 + "px";
+        body.style.paddingTop = "10px";
+        body.style.paddingBottom = "10px";
+        }
+        }
+
+        // Закрытие окон при клике вне области
+        window.onclick = function(event) {
+        var musicModal = document.getElementById("musicModal");
+        var storiesModal = document.getElementById("storiesModal");
+
+        if (event.target === musicModal) {
+        musicModal.style.display = "none";
+        }
+        if (event.target === storiesModal) {
+        storiesModal.style.display = "none";
         }
         };
     </script>
